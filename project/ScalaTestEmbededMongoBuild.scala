@@ -6,7 +6,7 @@ object ScalaTestEmbededMongoBuild extends Build {
   lazy val root = Project(id = "simplyscala-server", base = file("."),
     settings = Defaults.coreDefaultSettings ++ Seq(
       name := "scalatest-embedmongo",
-      organization := "com.github.simplyscala",
+      organization := "com.github.nghialt",
       description := "API to use embeded mongoDb database for testing in Scala",
 
       version := "0.2.4",
@@ -16,7 +16,7 @@ object ScalaTestEmbededMongoBuild extends Build {
       crossScalaVersions := Seq("2.11.12", "2.12.8"),
 
       libraryDependencies ++= Seq(
-        "de.flapdoodle.embed" % "de.flapdoodle.embed.mongo" % "2.0.0",
+        "de.flapdoodle.embed" % "de.flapdoodle.embed.mongo" % "2.2.0",
         "org.scalatest" %% "scalatest" % "3.0.1" % "test",
         "org.mongodb.scala" %% "mongo-scala-driver" % "1.2.1" % "test"
       ),
